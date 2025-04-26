@@ -15,9 +15,12 @@ const counterSlice = createSlice({
     },
     decreamnet: (state) => {
       state.count -= 1;
+    },
+    increamentByvalue: (state, action) => {
+      state.count += action.payload;
     }
   }
 });
 
-export const { increament, decreamnet } = counterSlice.actions;
+export const { increament, decreamnet, increamentByvalue } = counterSlice.actions;
 export default counterSlice.reducer;
